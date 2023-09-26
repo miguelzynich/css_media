@@ -1,11 +1,21 @@
 $color-font: #fff;
-$color-bg-default: #33f;
+$color-bg-default: rgb(50, 50, 255);
 $font-default: Arial, Helvetica, sans-serif;
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.header_1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center; 
+    padding: 10px 20px; 
+    background-color: #0058FF; 
+    color: #fff; 
 }
 
 body {
@@ -17,23 +27,94 @@ h1 {
     color: $color-font;
     text-align: center;
     width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    color: $color-font;
+    text-align: left;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+    margin-left: 30px;
+    line-height: rem;
+}
+
+
+.bike_das_aguas{
+    width: 40%;
+}
+
+#topo-bike {
+    background-color: #ffbd41;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 3.2rem;
+    height: 60rem;
+ }
+
+ .titulo{
+    text-align: left;
+    margin-left: 5rem;
+    color: #ffffff;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    width: 20%;
+    line-height: 6rem;
+}
+
+.titulo_jet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 3.2rem;
+    width: 15%;
+    line-height: 3.9rem;
+
+}
+
+.logo{
+    width: 5%;
+}
+
+#video-container{
+    background-color: #0058FF;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 #imagens {
     .container {
+        align-items: center;
+        background-color: #ffbd41;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        max-width: 100%;
+        flex-direction: row;
+        height: 40rem;
+        justify-content: center;
         margin: 0 auto;
+        padding: 20px;
+        width: 100%;
+
         
         img {
-            height: 200px;
-            width: auto;
-            margin: 5px;
-            object-fit: fill;
+            border: 4px solid #ffffff;
+            border-radius: 0.5rem;
+            height: 300px;
+            margin: 2px;
+            margin-right: 1.6rem;
+            object-fit: cover;
             object-position: bottom;
-            border: 1px solid #333;
+            width: auto;
+
 
             &:hover {
                 opacity: 75%;
@@ -48,8 +129,10 @@ header {
     background-color: $color-bg-default;
     width: 100vw;
     position: relative;
-    height: 50vh;
+    height: 10vh;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
 
     h1 {
         margin-top: 4rem;
@@ -58,29 +141,37 @@ header {
     }
 }
 
-.waves {
-    bottom: 0;
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 110%;
+    .waves-container {
+        position: relative;
+        height: auto;
+        bottom: 0;
+        left: 0;
+        width: 130%;
+        z-index: 1; 
+        pointer-events: none;
+        background-color: #ffbd41;
+    }
+    
 
     .wave-01 {
-        animation: wave1 3s ease-in-out infinite alternate;
+        animation: wave1 5s ease-in-out infinite alternate;
+        position: fixed;
         
     }
 
     .wave-02 {
-        animation: wave2 3s ease-in-out infinite alternate;
+        animation: wave2 5s ease-in-out infinite alternate;
+        position: fixed;
     }
 
     .wave-03 {
-        animation: dash1 3s cubic-bezier(0, 1.23, 1, 0.11) infinite alternate;
-        stroke-dasharray: 150;
+        animation: dash1 7s cubic-bezier(0, 1.23, 1, 0.11) infinite alternate;
+        stroke-dasharray: 250;
         stroke: #fff;
         stroke-width: 3px;
+        position: fixed;
     }
-}
+
 
 @keyframes wave1 {
     from {
